@@ -22,7 +22,8 @@ const ReportsSchema = new mongoose.Schema({
     },
     foto:{
         type:String,
-        requerid:true
+        requerid:true,
+        trim: true
     },
     creador:{
         type: mongoose.Schema.Types.ObjectId,

@@ -46,8 +46,8 @@ input ReportInput{
     descripcion:String!
     latitud:String!
     longitud:String!
-    foto:String
     estado:stateReport
+    foto:String!
 }
 enum stateReport{
     PENDIENTE
