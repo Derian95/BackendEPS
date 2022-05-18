@@ -93,6 +93,11 @@ async function getResportLatest(){
  lastest=await Reports.find().sort({_id:-1}).limit(10);
  return lastest;
 }
+async function getTotal(){
+  total=await Reports.find().count();
+  let convert= Number(total);
+  return convert;
+ }
 module.exports = {
   newReport,
   deleteReport,
@@ -101,4 +106,5 @@ module.exports = {
   getCompletes,
   getIncompletes,
   getResportLatest,
+  getTotal
 };

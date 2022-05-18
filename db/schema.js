@@ -38,6 +38,7 @@ type Report{
     longitud:String
     estado:stateReport
     creador:ID
+    foto:String
 }
 
 input ReportInput{
@@ -45,6 +46,7 @@ input ReportInput{
     descripcion:String!
     latitud:String!
     longitud:String!
+    foto:String
     estado:stateReport
 }
 enum stateReport{
@@ -59,18 +61,14 @@ type Query{
 
 type Query{
     getInfoUser:User
-    
-
     getReports:[Report]
-
     getReportUser:[Report]
 
     #Estadisticas
     getCompletes:String
     getIncompletes:String
-
     getResportLatest:[Report]
-
+    getTotal:Int
 }
 type Mutation{
     #User

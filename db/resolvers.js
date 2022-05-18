@@ -15,6 +15,7 @@ const resolvers={
         getCompletes: async ()=>ReportController.getCompletes(),
         getIncompletes: async ()=>ReportController.getIncompletes(),
         getResportLatest:async ()=>ReportController.getResportLatest(),
+        getTotal:async ()=>ReportController.getTotal(),
           
     },
     Mutation:{
