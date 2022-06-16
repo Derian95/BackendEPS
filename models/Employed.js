@@ -1,6 +1,16 @@
 const mongoose = require("mongoose");
 
 const EmployedSchema = mongoose.Schema({
+  nombre: {
+    type: String,
+    require: true,
+    trim: true,
+  },
+  apellidos: {
+    type: String,
+    require: true,
+    trim: true,
+  },
   unidad: {
     type: String,
     require: true,
@@ -16,6 +26,17 @@ const EmployedSchema = mongoose.Schema({
     type: String,
     require: true,
     trim: true,
+  },
+  password: {
+    type: String,
+    require: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    require: true,
+    trim: true,
+    unique: true,
   }
 });
 

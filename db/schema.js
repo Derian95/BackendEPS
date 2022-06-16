@@ -11,7 +11,17 @@ type User{
     password:String
     email:String
 }
+type Employed{
+    id:ID
+    nombre:String
+    apellidos:String
+    unidad:String
+    codigo:String
+    zona:String
+    email:String
+    password:String
 
+}
 type Token{
     token: String
 }
@@ -24,8 +34,21 @@ input UserInput{
     password: String!
     email: String!
 }
-
+input EmployedInput{
+    nombre: String!
+    apellidos: String!
+    unidad: String!
+    zona: String!
+    password: String!
+    email: String!
+    codigo: String!
+}
 input LoginUserInput{
+    email:String!
+    password:String!
+}
+
+input LoginEmployedInput{
     email:String!
     password:String!
 }
@@ -54,16 +77,14 @@ enum stateReport{
     CANCELADO
     COMPLETADO
   }
-type Query{
-    getUser(token:String!) : User
-}
+  
 
 
 type Query{
     getInfoUser:User
     getReports:[Report]
     getReportUser:[Report]
-
+    getEmployedInfo:Employed
     #Estadisticas
     getCompletes:String
     getIncompletes:String
@@ -74,7 +95,10 @@ type Mutation{
     #User
     registerUser(input: UserInput): String
     loginUser(input: LoginUserInput):Token
- 
+    
+    #Employed
+    registerEmployed(input: EmployedInput): String
+    loginEmployed(input: LoginEmployedInput):Token
 
     #Reports
     newReport(input:ReportInput):Report
