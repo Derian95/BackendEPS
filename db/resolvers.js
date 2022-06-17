@@ -11,7 +11,7 @@ const resolvers={
         //getInfoUser: (_,{id,nombre})=>UserController.getInfoUser(id,nombre),
         //para el schema getInfoUser(id: ID, nombre: String): User
         getReports:()=>ReportController.getReports(),
-
+        getUsers:()=>UserController.getUsers(),
         getReportUser:  (_,{},ctx) =>UserController.getReportUser(ctx),
         
         getCompletes: async ()=>ReportController.getCompletes(),

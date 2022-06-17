@@ -85,6 +85,7 @@ type Query{
     getReports:[Report]
     getReportUser:[Report]
     getEmployedInfo:Employed
+    getUsers:[User]
     #Estadisticas
     getCompletes:String
     getIncompletes:String

@@ -102,9 +102,19 @@ async function getReportUser(ctx){
 
 }
 
+async function getUsers() {
+  try {
+    const user = await User.find({});
+    return user;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
   registerUser,
   loginUser,
   getInfoUser,
   getReportUser,
+  getUsers
 };
